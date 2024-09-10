@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     Vector2 screenBounds;
     float score;
+
+    [SerializeField] Text scoreText;
 
     public static GameManager instance;
 
@@ -20,5 +23,6 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         score+= value;
+        scoreText.text = score.ToString();
     }
 }
