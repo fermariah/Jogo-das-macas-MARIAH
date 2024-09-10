@@ -16,23 +16,23 @@ public class SpawnManager : MonoBehaviour
 
     void Spawn()
     {
-        timer = Time.time;
+        timer -= Time.deltaTime;
 
         if(timer <= 0)
         {
-            float appleIndex = Random.Range(0, 1);
+            float appleIndex = Random.Range(0, 1f);
 
             GameObject appleSelected = null;
 
             switch(appleIndex)
             {
-                case <= 50:
+                case <= 0.5f:
                     appleSelected = applePrefabs[0];
                     break;
-                case <= 80:
+                case <= 0.8f:
                     appleSelected = applePrefabs[1];
                     break;
-                case > 80:
+                case > 0.8f:
                     appleSelected = applePrefabs[2];
                     break;
             }
