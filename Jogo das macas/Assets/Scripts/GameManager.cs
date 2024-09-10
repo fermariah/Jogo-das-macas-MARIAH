@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     Vector2 screenBounds;
+    float score;
 
     public static GameManager instance;
 
@@ -14,5 +15,10 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height)) + new Vector3(-1,1);
+    }
+
+    public void AddScore(int value)
+    {
+        score+= value;
     }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4720323028911223417}
   - component: {fileID: 5583074938628507483}
   - component: {fileID: 5277951324542821664}
+  - component: {fileID: 1002504770703942423}
   m_Layer: 0
   m_Name: Golden Apple
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +149,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &1002504770703942423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559147309243180164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d950b868bcce0ac419a806157eaacc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 100

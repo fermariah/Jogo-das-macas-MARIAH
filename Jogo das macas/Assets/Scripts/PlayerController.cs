@@ -28,4 +28,14 @@ public class PlayerController : MonoBehaviour
         position.x = Mathf.Clamp(transform.position.x, -GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x);
         transform.position = position;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Apple"))
+        {
+            int value = collision.GetComponent<Apple>().Score;
+            GameManager.instance.AddScore(value);
+            Destroy(collision.gameObject);
+        }
+    }
 }

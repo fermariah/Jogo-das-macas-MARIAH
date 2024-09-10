@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3254399532319782652}
   - component: {fileID: 3944350113001550572}
   - component: {fileID: 8748499911288396374}
+  - component: {fileID: 880476376152766144}
   m_Layer: 0
   m_Name: Green Apple
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +149,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &880476376152766144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696035471871738851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d950b868bcce0ac419a806157eaacc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 50
