@@ -42,3 +42,37 @@ public class SpawnManager : MonoBehaviour
         }
     }
 }
+
+public class AppleSpawner : MonoBehaviour
+{
+    public GameObject applePrefab;
+    public int maxApples = 10;
+    public List<Vector2> applePositions = new List<Vector2>();
+    public float spawnRange = 5f;
+
+    void SpawnApple()
+    {
+        Vector2 newPosition;
+        bool positionValid;
+
+        do
+        {
+            newPosition = new Vector2(Random.Range(-spawnRange, spawnRange), Random.Range(-spawnRange, spawnRange));
+            positionValid = true;
+
+            // Verifica se a posição já está ocupada
+            foreach (var pos in applePositions)
+            {
+                if (Vector2.Distance(pos, newPosition) < 1f)
+                {
+                    positionValid = false;
+                    break;
+                }
+            }
+        }
+        while (!positionValid);
+
+        Instantiate(applePrefab, newPosition, Quaternion.identity);
+        applePositions.Add(newPosition);
+    }
+}
