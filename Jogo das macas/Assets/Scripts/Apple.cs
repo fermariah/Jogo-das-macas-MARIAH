@@ -6,7 +6,7 @@ public class Apple : MonoBehaviour
 {
     const int speed = 5;
     [SerializeField] int score;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
 
     public int Score { get => score; }
 
@@ -21,6 +21,18 @@ public class Apple : MonoBehaviour
 
         if(transform.position.y < -GameManager.instance.ScreenBounds.y)
         {
+            Destroy(gameObject);
+        }
+    }
+}
+
+public class Maçã : Apple
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            GameManagerDelegate.AppleCollected();
             Destroy(gameObject);
         }
     }
