@@ -43,14 +43,14 @@ public class SpawnManager : MonoBehaviour
     }
 }
 
-public class AppleSpawner : SpawnManager //classe derivada do SpawnManager para definir os spawns das maÁ„s e suas destruiÁıes
+public class AppleSpawner : SpawnManager //classe derivada do SpawnManager para definir os spawns das ma√ß√£s e suas destrui√ß√µes
 {
     public GameObject macaPrefab;
     public int maxMacas = 10;
     public List<Vector2> MacasPosicoes = new List<Vector2>();
     public float spawnRange = 5f;
 
-    void SpawnApple() //mÈtodo para implementar o while do e foreach
+    void SpawnApple() //m√©todo para implementar o while do e foreach
     {
         Vector2 posicaonova;
         bool posicaovalida;
@@ -60,7 +60,7 @@ public class AppleSpawner : SpawnManager //classe derivada do SpawnManager para 
             posicaonova = new Vector2(Random.Range(-spawnRange, spawnRange), Random.Range(-spawnRange, spawnRange));
             posicaovalida = true;
 
-            // Verifica se a posiÁ„o j· est· ocupada
+            // Verifica se a posi√ß√£o j√° est√° ocupada
             foreach (var pos in MacasPosicoes)
             {
                 if (Vector2.Distance(pos, posicaonova) < 1f)
